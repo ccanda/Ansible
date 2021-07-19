@@ -1,0 +1,17 @@
+
+[routers]
+
+10.98.100.15
+
+
+[switches]
+
+10.98.100.17
+
+
+[routers:vars]
+
+ansible_user=cisco
+ansible_password=cisco
+ansible_connection=network_cli
+ansible_network_os=ios
