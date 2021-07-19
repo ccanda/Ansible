@@ -1,22 +1,16 @@
----
-
-- name: General Config
-
-  host: routers
-
-  tasks:
-
-  - name: Add Banner
-
-    ios_banner:
-      banner: login
-      text:
-        This device is managed by ccanda
-      state: present
-
-  - name: Add Loopback
-
-    ios_interface:
-      name: Loopback1
-      state: present
-      
+--- 
+- 
+  hosts: routers
+  name: "General Config"
+  tasks: 
+    - 
+      ios_banner: 
+        banner: login
+        state: present
+        text: "This device is managed by ccanda"
+      name: "Add Banner"
+    - 
+      ios_interface: 
+        name: Loopback1
+        state: present
+      name: "Add Loopback"
